@@ -1,0 +1,20 @@
+{
+  "name": "dotma-site",
+  "version": "1.0.0",
+  "description": "Coolkids.jpeg",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm start",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aXises/dotma-site.git"
+  },
+  "author": "DOTMA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aXises/dotma-site/issues"
+  },
+  "homepage": "https://github.com/aXises/dotma-site#readme"
+}
