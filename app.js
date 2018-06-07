@@ -1,10 +1,13 @@
 let express = require('express');
 let path = require('path');
 let lessMiddleware = require('less-middleware');
-let cors = require('cors');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
+let bodyParser = require('body-parser');
 let package = require('./package.json');
-
 let app = express();
+
+let index = require('./routes/index');
 
 app.locals.appVersion = package.version;
 app.locals.appAuthor = package.author;
@@ -14,19 +17,18 @@ app.use(lessMiddleware(__dirname + '/public', [{
     compress: true
   }
 }]));
-app.use('/bower_components', express.static(__dirname + '/bower_components'));
-app.use(cors());
+app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
-app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/showcases', express.static(__dirname + '/views/showcases'))
+
+app.use('/', index);
 
 app.use(function(req, res, next) {
   let err = new Error('Not Found');
