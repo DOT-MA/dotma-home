@@ -3,27 +3,27 @@
 header {
     height: 100vh;
     width: 100%;
-    background-color: @background_standard;
-    .title_holder,
-    .background_holder {
+    background-color: @background-standard;
+    .title-holder,
+    .background-holder {
         position: absolute;
         top: 0;
         height: inherit;
         width: inherit;
     }
 
-    .title_holder {
+    .title-holder {
         h1 {
             height: inherit;
             font-weight: bold;
             font-style: italic;
             font-size: 5em;
             letter-spacing: 5px;
-            color: @typography_light;
+            color: @typography-light;
             .centerXYFlex;
         }
     }
-    .background_holder {
+    .background-holder {
         // placeholder image
         background-image: url("https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
         filter: blur(3px);
@@ -32,5 +32,7 @@ header {
 }
 
 main {
-
+    height: 300px;
+    background-color: @background-standard;
+    z-index: 1;
 }

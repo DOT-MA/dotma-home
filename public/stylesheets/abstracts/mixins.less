@@ -3,47 +3,52 @@
 .centerX,
 .centerY,
 .centerXY {
-  position: absolute;
+	position: absolute;
 }
 
 .centerX {
-  left: 50%;
-  transform: translateX(-50%);
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .centerY {
-  top: 50%;
-  transform: translateY(-50%);
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .centerXY {
-  .centerX;
-  .centerY;
-  transform: translate(-50%, -50%);
+	.centerX;
+	.centerY;
+	transform: translate(-50%, -50%);
 }
 
 .centerXFlex,
 .centerYFlex,
 .centerXYFlex {
-  display: flex;
+	display: flex;
 }
 
 .centerXFlex {
-  justify-content: center;
+	justify-content: center;
 }
 
 .centerYFlex {
-  align-items: center;
+	align-items: center;
 }
 
 .centerXYFlex {
-  .centerXFlex;
-  .centerYFlex;
+	.centerXFlex;
+	.centerYFlex;
 }
 
 .no-transitions * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-ms-transition: none !important;
+	-o-transition: none !important;
+}
+
+.hidden {
+	opacity: 0;
+	pointer-events: none;
 }
