@@ -12,10 +12,7 @@
     "test": "mocha",
     "postinstall": ""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aXises/dotma-site.git"
-  },
+  "repository": "git+https://github.com/aXises/dotma-site.git",
   "author": "DOTMA",
   "license": "MIT",
   "bugs": {
@@ -25,6 +22,7 @@
   "dependencies": {
     "coffeescript": "^2.3.1",
     "express": "^4.16.3",
+    "jquery": "^3.3.1",
     "less-middleware": "^3.0.0",
     "pug": "^2.0.3",
     "request": "^2.87.0",
