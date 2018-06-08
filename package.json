@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "test": "mocha",
-    "postinstall": ""
+    "postinstall": "coffee -c ."
   },
   "repository": "git+https://github.com/aXises/dotma-site.git",
   "author": "DOTMA",
